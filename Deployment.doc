@@ -1,0 +1,29 @@
+﻿
+API URL ROUTE:/api/extract/popular_text/list
+HTTP METHOD: POST
+HEADER Parametes:
+{Content-Type:"multipart/form-data"}
+Request Parameters: {"docs": Selected files}
+HTTP Response: 200
+Response structure:{
+    "Iraq": {
+        "count": 2,
+        "file_name": [
+            "doc1.txt",
+            "doc2.txt"
+        ],
+        "lines": [
+            "I spoke here a year ago and delivered a message about Iraq that was similar to the one I did today.",
+            "The time for waiting in Iraq is over."
+        ]
+    },
+    "America": {
+        "count": 2,
+        "file_name": [
+            "doc1.txt"
+        ],
+        "lines": [
+            "And I accepted the job, sight unseen, motivated then by a single, simple, powerful idea - that I might play a small part in building a better America.",
+            "Let's be the generation that ends poverty in America."]}}
+
+P.S: There is a environmet variable named WORD_COUNT_THRESHOLD which is set to 5 .So the program lists popular words having occurence greater than the WORD_COUNT_THRESHOLD specified.If it is changed, the offset can be changed.
